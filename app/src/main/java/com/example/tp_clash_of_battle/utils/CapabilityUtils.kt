@@ -1,4 +1,4 @@
-package com.example.democlashofbattle.utils
+package com.example.tp_clash_of_battle.utils
 
 import android.content.Context
 import androidx.core.content.res.ResourcesCompat

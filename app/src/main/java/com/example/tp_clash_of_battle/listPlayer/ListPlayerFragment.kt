@@ -5,21 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import com.example.tp_clash_of_battle.R
 import com.example.tp_clash_of_battle.databinding.FragmentListPlayerBinding
 
 
 class ListPlayerFragment : Fragment() {
 
     private var _binding: FragmentListPlayerBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
-
     private lateinit var viewModel: ListPlayerViewModel
-
     private val adapter = ListPlayerAdapter()
 
 
@@ -40,23 +33,14 @@ class ListPlayerFragment : Fragment() {
 
         binding.recyclerView.adapter = adapter
 
-        /*viewModel.trip.observe(viewLifecycleOwner) {
+        viewModel.listPlayer.observe(viewLifecycleOwner) {
             adapter.submitList(it)
-        }*/
+        }
 
-        // viewModel.getTrips()   //Api used without db
-
-        /*binding.addTripButton.setOnClickListener {
-            findNavController().navigate(R.id.action_MyTripFragment_to_addTripFragment)
-        }*/
-
-
+        viewModel.getPlayers()
     }
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
-
 }

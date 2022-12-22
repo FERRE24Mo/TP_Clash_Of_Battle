@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.example.democlashofbattle.utils.getColor
+import com.example.tp_clash_of_battle.utils.getColor
 import com.example.tp_clash_of_battle.models.Capability
 import com.example.tp_clash_of_battle.utils.getColor
-import com.example.democlashofbattle.utils.getDescriptionId
-import com.example.democlashofbattle.utils.getNameId
+import com.example.tp_clash_of_battle.utils.getDescriptionId
+import com.example.tp_clash_of_battle.utils.getNameId
 import com.example.tp_clash_of_battle.databinding.ViewCapabilityBinding
 import com.example.tp_clash_of_battle.utils.getNameId
 

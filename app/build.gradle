@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.tp_clash_of_battle"
-        minSdk 33
+        minSdk 21
         targetSdk 33
         versionCode 1
         versionName "1.0"

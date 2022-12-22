@@ -10,12 +10,12 @@ import com.example.tp_clash_of_battle.models.Job
 import com.example.tp_clash_of_battle.models.Player
 import com.example.tp_clash_of_battle.utils.loadImage
 
-class PlayerAdapter(val clickListener: (String) -> Unit) : ListAdapter<Player, PlayerViewHolder>(
+class PlayerAdapter: ListAdapter<Player, PlayerViewHolder>(
     PlayerDiffCallback()
 ) {
     override fun onBindViewHolder(holder: PlayerViewHolder, position: Int) {
         val item = getItem(position)
-        holder.bind(clickListener, item)
+        holder.bind(item)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlayerViewHolder {
@@ -26,7 +26,7 @@ class PlayerAdapter(val clickListener: (String) -> Unit) : ListAdapter<Player, P
 class PlayerViewHolder private constructor(val binding: ViewCardPlayerBinding) :
     RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(clickListener: (String) -> Unit, item: Player) {
+    fun bind(item: Player) {
         binding.TVNom.text = item.name
         loadImage(binding.IVImage, item.imageUrl)
         val capacite1 = item.capability1.type.name
@@ -58,11 +58,11 @@ class PlayerViewHolder private constructor(val binding: ViewCardPlayerBinding) :
             "HEAL" -> soin++
         }
 
-        if (attaque == 2) {
+        if (attaque >= 2) {
             binding.TVNomClasse.text = Job.WARRIOR.name
-        } else if (defense == 2) {
+        } else if (defense >= 2) {
             binding.TVNomClasse.text = Job.KNIGHT.name
-        } else if (soin == 2) {
+        } else if (soin >= 2) {
             binding.TVNomClasse.text = Job.PRIEST.name
         }else{
             binding.TVNomClasse.text = Job.BARD.name
@@ -88,5 +88,3 @@ class PlayerDiffCallback : DiffUtil.ItemCallback<Player>() {
         return oldItem == newItem
     }
 }
-
-

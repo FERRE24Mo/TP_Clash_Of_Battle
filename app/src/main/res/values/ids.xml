@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="iv_player" type="id" />
+    <item name="et_url_image_player" type="id" />
+    <item name="et_nom_player" type="id" />
+    <item name="tv_c1" type="id" />
+    <item name="tv_competence_1" type="id" />
+    <item name="b_modifier_competence_1" type="id" />
+    <item name="tv_c2" type="id" />
+    <item name="tv_competence_2" type="id" />
+    <item name="b_modifier_competence_2" type="id" />
+    <item name="tv_c3" type="id" />
+    <item name="tv_competence_3" type="id" />
+    <item name="b_modifier_competence_3" type="id" />
+    <item name="b_valider" type="id" />
+</resources>
