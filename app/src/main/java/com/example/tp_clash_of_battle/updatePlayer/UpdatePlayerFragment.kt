@@ -7,19 +7,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import com.example.tp_clash_of_battle.databinding.FragmentUpdatePlayerBinding
+import com.example.tp_clash_of_battle.utils.getColor
 import com.example.tp_clash_of_battle.utils.loadImage
 
 class UpdatePlayerFragment : Fragment() {
 
     private var _binding: FragmentUpdatePlayerBinding? = null
-
     private lateinit var viewModel: UpdatePlayerViewModel
     private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel = ViewModelProvider(this).get(UpdatePlayerViewModel::class.java)
-        viewModel.getPlayer("Clement")
+        viewModel.getPlayer("Edouard")
     }
 
     override fun onCreateView(
@@ -40,9 +40,11 @@ class UpdatePlayerFragment : Fragment() {
             binding.etNomPlayer.setText(it.name)
             binding.etUrlImagePlayer.setText(it.imageUrl)
             binding.tvCompetence1.text = it.capability1.name
-            binding.tvCompetence1.setTextColor(it.capability1.color) =
-                binding.tvCompetence2.text = it.capability2.name
+            binding.tvCompetence1.setTextColor(it.capability1.getColor(requireContext()))
+            binding.tvCompetence2.text = it.capability2.name
+            binding.tvCompetence2.setTextColor(it.capability1.getColor(requireContext()))
             binding.tvCompetence3.text = it.capability3.name
+            binding.tvCompetence3.setTextColor(it.capability1.getColor(requireContext()))
         }
     }
 

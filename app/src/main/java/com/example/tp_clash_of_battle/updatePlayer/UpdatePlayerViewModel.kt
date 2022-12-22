@@ -20,6 +20,10 @@ class UpdatePlayerViewModel: ViewModel() {
 
     fun updatePlayer(player: Player){
         viewModelScope.launch {
+            dao.update(player)
+            if(player.remoteId!= null) {
+                api.updateItem(player.remoteId, player)
+            }
         }
     }
 }
