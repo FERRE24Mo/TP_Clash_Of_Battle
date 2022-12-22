@@ -19,7 +19,7 @@ class UpdatePlayerFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel = ViewModelProvider(this).get(UpdatePlayerViewModel::class.java)
-        viewModel.getPlayer("Edouard")
+        viewModel.getPlayer("Clément")
     }
 
     override fun onCreateView(
