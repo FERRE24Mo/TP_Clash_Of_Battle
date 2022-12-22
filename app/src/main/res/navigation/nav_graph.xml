@@ -3,10 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.example.tp_clash_of_battle.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
+    app:startDestination="@id/listPlayersFragment">
+    <fragment
+        android:id="@+id/listPlayersFragment"
+        android:name="com.example.tp_clash_of_battle.listPlayer.ListPlayerFragment"
+        android:label="fragment_list_players"
+        tools:layout="@layout/fragment_list_player" >
+        <action
+            android:id="@+id/action_listPlayersFragment_to_updatePlayerFragment"
+            app:destination="@id/updatePlayerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updatePlayerFragment"
+        android:name="com.example.tp_clash_of_battle.updatePlayer.UpdatePlayerFragment"
+        android:label="fragment_update_player"
+        tools:layout="@layout/fragment_update_player" />
 </navigation>
