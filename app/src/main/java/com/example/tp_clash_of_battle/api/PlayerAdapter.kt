@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.tp_clash_of_battle.databinding.ViewCardPlayerBinding
 import com.example.tp_clash_of_battle.models.Job
 import com.example.tp_clash_of_battle.models.Player
 import com.example.tp_clash_of_battle.utils.loadImage
