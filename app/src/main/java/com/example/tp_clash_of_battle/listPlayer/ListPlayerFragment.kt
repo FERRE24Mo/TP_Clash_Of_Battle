@@ -50,6 +50,7 @@ class ListPlayerFragment : Fragment() {
             findNavController().navigate(R.id.action_MyTripFragment_to_addTripFragment)
         }*/
 
+
     }
 
     override fun onDestroyView() {
