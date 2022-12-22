@@ -1,3 +1,4 @@
+/*
 package com.example.tp_clash_of_battle.capabilities
 
 import android.content.Context
@@ -33,3 +34,4 @@ class SelectCapabilityActivity : AppCompatActivity() {
         }
     }
 }
+ */
