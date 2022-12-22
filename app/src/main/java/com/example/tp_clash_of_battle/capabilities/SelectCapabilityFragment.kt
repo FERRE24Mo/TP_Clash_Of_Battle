@@ -1,4 +1,4 @@
-package com.example.tp_clash_of_battle.capabilities
+/*package com.example.tp_clash_of_battle.capabilities
 
 import android.app.Activity
 import android.content.Intent
@@ -53,3 +53,5 @@ class SelectCapabilityFragment : Fragment() {
         binding = null
     }
 }
+
+ */
