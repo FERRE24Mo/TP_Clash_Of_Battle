@@ -1,5 +1,6 @@
 package com.example.tp_clash_of_battle.database
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.tp_clash_of_battle.models.Player
 
@@ -8,7 +9,7 @@ import com.example.tp_clash_of_battle.models.Player
 interface PlayerDAO{
 
     @Query("SELECT * FROM Player ORDER BY name")
-    suspend fun getAll(): List<Player>
+    fun getAll(): LiveData<List<Player>>
 
     @Update
     suspend fun update(player: Player)
