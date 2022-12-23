@@ -1,4 +1,3 @@
-/*
 package com.example.tp_clash_of_battle.capabilities
 
 import android.content.Context
@@ -6,7 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tp_clash_of_battle.models.Capability
-import com.example.tp_clash_of_battle.R
 
 class SelectCapabilityActivity : AppCompatActivity() {
 
@@ -25,13 +23,9 @@ class SelectCapabilityActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_select_capability)
-
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.container, SelectCapabilityFragment())
                 .commitNow()
         }
     }
 }
- */
