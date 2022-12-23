@@ -26,7 +26,7 @@ class ListPlayerViewModel :ViewModel(){
     fun getMonPlayer(nom:String)
     {
         viewModelScope.launch {
-            monPlayer = dao.getUser(nom)
+            //monPlayer = dao.getUser(nom)
         }
     }
 }
