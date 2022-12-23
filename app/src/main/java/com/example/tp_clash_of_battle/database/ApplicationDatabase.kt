@@ -1,8 +1,9 @@
+package com.example.tp_clash_of_battle.database
+
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.tp_clash_of_battle.database.PlayerDAO
 import com.example.tp_clash_of_battle.models.Player
 
 @Database(entities = arrayOf(Player::class), version = 1)
