@@ -24,7 +24,6 @@ class SelectCapabilityAdapter(private val clickListener: (Capability) -> Unit) :
     }
 }
 
-
 class CapabilityViewHolder private constructor(private val binding: ViewCapabilityBinding) :
     ViewHolder(binding.root) {
 

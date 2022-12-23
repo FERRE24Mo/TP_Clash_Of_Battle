@@ -16,19 +16,11 @@ import com.example.tp_final_clashofbattle.utils.getColor
 import com.example.tp_final_clashofbattle.utils.getNameId
 import com.example.tp_final_clashofbattle.utils.loadImage
 
-/**
- * A simple [Fragment] subclass as the second destination in the navigation.
- */
 class UpdatePlayerFragment : Fragment() {
 
     private var _binding: FragmentUpdateplayerBinding? = null
-
     private lateinit var viewModel: UpdatePlayerViewModel
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
-
     private val selectCapabilityLauncher = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) {
@@ -45,7 +37,7 @@ class UpdatePlayerFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel = ViewModelProvider(this).get(UpdatePlayerViewModel::class.java)
-        viewModel.getPlayer("Edouard")
+        viewModel.getPlayer("Morgan")
     }
 
     override fun onCreateView(
@@ -72,24 +64,7 @@ class UpdatePlayerFragment : Fragment() {
             binding.tvCompetence3.setText(it.capability3.getNameId())
             binding.tvCompetence3.setTextColor(it.capability1.getColor(requireContext()))
         }
-
-
-
-
-
-
-//        binding.bValider.setOnClickListener{
-//            val updatePlayer = Player(
-//                name = binding.etNomPlayer.text.toString(),
-//                imageUrl = binding.etUrlImagePlayer.text.toString(),
-//                capability1 = binding.
-//                capability2 = binding.tvCompetence2,
-//                capability3 = binding.tvCompetence3,
-//                )
-//        }
-
     }
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

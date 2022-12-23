@@ -12,26 +12,17 @@ import com.example.tp_final_clashofbattle.utils.CapabilityRoomConverter
 @TypeConverters(CapabilityRoomConverter::class)
 abstract class AppDatabase : RoomDatabase() {
 
-
-
     abstract fun playerDao(): PlayerDAO
-
     companion object {
-
-
         var INSTANCE: AppDatabase? = null
-
         fun init(context: Context){
-
             INSTANCE = Room.databaseBuilder(
                 context.applicationContext,
                 AppDatabase::class.java,
-                "la_base_de_donnees"
+                "BDD"
             )
                 .fallbackToDestructiveMigration()
                 .build()
         }
-
     }
-
 }
