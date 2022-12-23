@@ -19,12 +19,11 @@ class ListPlayerViewModel :ViewModel(){
     fun getPlayers(){
         viewModelScope.launch {
             val playerList = api.getItems().toListOfPlayers()
-            //Rajouter le replace de la DAO
             dao.replace(playerList)
         }
     }
 
-    fun getMonPlayer(nom:Long)
+    fun getMonPlayer(nom:String)
     {
         viewModelScope.launch {
             monPlayer = dao.getUser(nom)
